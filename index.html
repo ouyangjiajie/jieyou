@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta port" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@3.5.2/animate.min.css">
+    <!-- 模板引擎 表格1模板-->
+    <script id="table1" type="text/html">
+     {{each list as value i}}
+      <tr>
+        <td class="first-td">{{list[i].a}}
+          <ul class="first-td-ul">
+            <li>
+                <span>增行</span>
+                <span>Alt+1</span>
+            </li>
+            <li> 
+                <span>插行</span>
+                <span>Alt+2</span></li>
+            <li>
+                <span>复制行</span>
+                <span>Alt+3</span>
+            </li>
+            <li>
+                <span>删行</span>
+                <span>Alt+4</span>
+            </li>
+            </ul>
+        </td>
+        <td><input type="text" class="b-none" value={{list[i].b}}></td>
+        <td><input type="text" class="b-none" value={{list[i].c}}></td>
+        <td><input type="text" class="b-none" value={{list[i].d}}></td>
+        <td><input type="text" class="b-none" value={{list[i].e}}></td>
+        <td><input type="text" class="b-none" value={{list[i].f}}></td>
+        <td><input type="text" class="b-none" value={{list[i].g}}></td>
+        <td><input type="text" class="b-none" value={{list[i].h}}></td>
+        <td><input type="number" class="b-none" value={{list[i].i}}></td>
+        <td><input type="number" class="b-none" value={{list[i].j}}></td>
+        <td><input type="number" class="b-none" value={{list[i].k}}></td>
+        <td><input type="text" class="b-none" value={{list[i].l}}></td>
+        <td><input type="text" class="b-none" value={{list[i].m}}></td>
+      </tr> 
+     {{/each}}
+     <tr>
+        <td colspan="13" style="text-align: left;padding-left: 5px;color: black;font-weight: 600;">
+            合计
+        </td>
+    </tr>
+    </script>
+   
+     <!-- 模板引擎 表格2模板-->
+    <script id="table2" type="text/html">
+      {{each list as value j}}
+       <tr>
+         <td class="first-td">{{list[j].a}}
+             <ul class="first-td-ul">
+                 <li>
+                     <span>增行</span>
+                     <span>Alt+1</span>
+                 </li>
+                 <li>
+                     <span>插行</span>
+                     <span>Alt+2</span></li>
+                 <li>
+                     <span>复制行</span>
+                     <span>Alt+3</span>
+                 </li>
+                 <li>
+                     <span>删行</span>
+                     <span>Alt+4</span>
+                 </li>
+             </ul>
+         </td>
+         <td><input type="text" class="b-none" value={{list[j].b}}></td>
+         <td><input type="text" class="b-none" value={{list[j].c}}></td>
+         <td><input type="number" class="b-none" value={{list[j].d}}></td>
+         <td><input type="number" class="b-none" value={{list[j].e}}></td>
+         <td><input type="number" class="b-none" value={{list[j].f}}></td>
+        </tr>
+      {{/each}}
+        <tr>
+            <td colspan="13" style="text-align: left;padding-left: 5px;color: black;font-weight: 600;">
+                合计
+            </td>
+        </tr>
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-left">
+            <div class="header-left-logo animated bounceInDown">
+                <i>T+</i>
+                <span>普及版</span>
+            </div>
+            <div class="header-left-title">
+                <span>[003]光裕建材家居生活馆 (2020-06-15)</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="header-right-search">
+                <input type="text" placeholder="搜素-产品功能" class="ipt">
+                <i class="iconfont search icon-icon-test11"></i>
+            </div>
+            <ul class="header-right-logo">
+                <li class="header-right-logo-item">
+                    <a href="javascirpt:;">
+                        <i class="iconfont logo">&#xe651;</i>
+                    </a>
+                </li>
+                <li class="header-right-logo-item">
+                    <a href="javascirpt:;">
+                        <i class="iconfont logo">&#xe659;</i>
+                    </a>
+                </li>
+                <li class="header-right-logo-item">
+                    <a href="javascirpt:;">
+                        <i class="iconfont logo">&#xe635;</i>
+                    </a>
+                    <ul class="wrap-logo">
+                        <li>消息</li>
+                        <li>单据消息</li>
+                        <li>单据审核通知</li>
+                        <li>查询消息</li>
+                        <li>预警消息</li>
+                        <li>个性化消息</li>
+                        <li>系统消息</li>
+                    </ul>
+                <li class="header-right-logo-item">
+                    <a href="javascirpt:;">
+                        <i class="iconfont logo">&#xe648;</i>
+                    </a>
+                    <ul class="wrap-logo">
+                        <li>预警</li>
+                        <li>收款预警</li>
+                        <li>付款预警</li>
+                        <li>未报销支票预警</li>
+                        <li>信用超额预警</li>
+                        <li>最低库存预警</li>
+                        <li>最高存款预警</li>
+                    </ul>
+                </li>
+                <li class="header-right-logo-item">
+                    <a href="javascirpt:;">
+                        <i class="iconfont logo">&#xe64a;</i>
+                    </a>
+                </li>
+                <li class="header-right-logo-item">
+                    <a href="javascirpt:;">
+                        <i class="iconfont logo">&#xe61d;</i>
+                    </a>
+                </li>
+                <li class="header-right-logo-item">
+                    <a href="javascirpt:;">
+                        <i class="iconfont logo">&#xe665;</i>
+                    </a>
+                    <ul class="wrap-logo">
+                        <li>更新公告</li>
+                        <li>服务信息</li>
+                        <li>畅捷通网站</li>
+                        <li>关于</li>
+                    </ul>
+                </li>
+                <li class="header-right-logo-item">
+                    <a href="javascirpt:;">
+                        <i class="iconfont logo">&#xe655;</i>
+                        <span>john</span>
+                    </a>
+                    <ul class="wrap-logo">
+                        <li>修改密码</li>
+                        <li><i class="iconfont">&#xe618;</i>界面设置</li>
+                        <li><i class="iconfont">&#xe67f;</i>换肤</li>
+                        <li><i class="iconfont">&#xe67e;</i>工作台设置</li>
+                        <li>网页测速</li>
+                        <li>注销</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="nav">
+        <ul class="nav-tabs">
+            <li class="nav-tab-item"><a href="javascript:;">我的桌面</a></li>
+            <li class="nav-tab-item"><a href="javascript:;">初始化导航
+                    <i class="iconfont cp fm">&#xe72d;</i>
+                </a></li>
+            <li class="nav-tab-item"><a href="javascript:;">进货单
+                    <i class="iconfont cp fm">&#xe72d;</i>
+                </a></li>
+        </ul>
+
+        <div class="nav-right-logo">
+            <a><i class="iconfont fm" href="">&#xe680;</i></a>
+            <a><i class="iconfont fm">&#xe72d;</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="L-Sidebar">
+            <ul class="L-Sidebar-ul">
+                <li class="L-Sidebar-li L-Sidebar-first" data-set="true">
+                    <i class="iconfont">&#xe7c2;</i>
+                    <span>往来单位分类</span>
+                    <ul class="L-Sidebar-ul">
+                        <li class="L-Sidebar-li" data-set="true">
+                            <i class="iconfont">&#xe7c2;</i>
+                            <span>01 客户</span>
+                            <ul class="L-Sidebar-ul dn">
+                                <li class="L-Sidebar-li" data-set="true">
+                                    <i class="iconfont">&#xe793;</i>
+                                    <span>0101 2019年</span>
+                                </li>
+                                <li class="L-Sidebar-li" data-set="true">
+                                    <i class="iconfont">&#xe793;</i>
+                                    <span>0101 2019年</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="L-Sidebar-li" data-set="true">
+                            <i class="iconfont">&#xe7c2;</i>
+                            <span>02 供应商</span>
+                        </li>
+                        <li class="L-Sidebar-li" data-set="true">
+                            <i class="iconfont">&#xe7c2;</i>
+                            <span>03 加工厂</span>
+                        </li>
+                        <li class="L-Sidebar-li" data-set="true">
+                            <i class="iconfont">&#xe793;</i>
+                            <span>03 运输单位</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="R-Sidebar">
+            <div class="select">
+                <ul class="select-wrap">
+                    <li title="新增">新增<i class="iconfont">&#xe6a4;</i></li>
+                    <li title="选单">选单<i class="iconfont">&#xe6a4;</i></li>
+                    <li title="保存">保存<i class="iconfont">&#xe6a4;</i></li>
+                    <li title="删除">删除<i class="iconfont">&#xe6a4;</i></li>
+                    <li title="审核">审核<i class="iconfont">&#xe6a4;</i></li>
+                    <li title="生单">生单<i class="iconfont">&#xe6a4;</i></li>
+                    <li title="转换">转换<i class="iconfont">&#xe6a4;</i></li>
+                    <li title="变更">变更<i class="iconfont">&#xe6a4;</i></li>
+                    <li title="工具">工具<i class="iconfont">&#xe6a4;</i></li>
+                    <li title="联查">联查<i class="iconfont">&#xe6a4;</i></li>
+                    <li title="设置">设置<i class="iconfont">&#xe6a4;</i></li>
+                    <li title="打印">打印<i class="iconfont">&#xe6a4;</i></li>
+                    <li title="开发">开发<i class="iconfont">&#xe6a4;</i></li>
+                    <li title="更多">更多<i class="iconfont">&#xe6a4;</i></li>
+                </ul>
+            </div>
+
+            <form action="">
+                <div class="form-div">
+                    <label for="date">单据日期：</label>
+                    <input type="date" id="date" class="b-b1">
+                </div>
+                <div class="form-div">
+                    <label for="number">单据编号：</label>
+                    <input type="text" id="number" class="b-b1">
+                </div>
+                <div class="form-div">
+                    <label for="supplier">供应商：</label>
+                    <input type="text" id="supplier" class="b-b1">
+                </div>
+                <div class="form-div">
+                    <label for="business">业务类型：</label>
+                    <input type="text" id="business" class="b-b1">
+                </div>
+                <div class="form-div">
+                    <label for="project">项目：</label>
+                    <input type="text" id="project" class="b-b1">
+                </div>
+                <div class="form-div">
+                    <label for="advice">到货日期：</label>
+                    <input type="date" id="advice" class="b-b1">
+                </div>
+                <div class="form-div m-l">
+                    <label for="payment">付款方式：</label>
+                    <input type="text" list="itemlist" name="" class="b-b1">
+
+                    <datalist id="itemlist">
+                        <option>全额现结</option>
+                        <option>月结</option>
+                        <option>全额订金</option>
+                        <option>限期付款</option>
+                        <option>其它</option>
+                    </datalist>
+                </div>
+                <div class="form-div">
+                    <label for="warehouse">仓库：</label>
+                    <input type="text" id="warehouse" class="b-b1">
+                </div>
+                <div class="form-div">
+                    <label for="sum">现结金额：</label>
+                    <input type="number" id="sum" min="0" class="b-b1">
+                </div>
+
+            </form>
+
+            <div class="nav" style="background-color: #fff;">
+                <ul class="nav-tabs toggle-table">
+                    <li class="nav-tab-item"><a href="javascript:;">明细</a></li>
+                    <li class="nav-tab-item"><a href="javascript:;">汇总</a></li>
+                </ul>
+
+                <div class="nav-right-logo">
+                    <a><i class="iconfont fm logo-cp">&#xe646;</i></a>
+                    <a><i class="iconfont fm logo-cp">&#xe72d;</i></a>
+                    <a><i class="iconfont fm logo-cp">&#xe680;</i></a>
+                    <a><i class="iconfont fm logo-cp">&#xe72d;</i></a>
+                    <a><i class="iconfont fm logo-cp">&#xe680;</i></a>
+                    <a><i class="iconfont fm logo-cp">&#xe72d;</i></a>
+                    <a><i class="iconfont fm logo-cp">&#xe680;</i></a>
+                    <a><i class="iconfont fm logo-cp">&#xe72d;</i></a>
+                    <a><i class="iconfont fm logo-cp">&#xe680;</i></a>
+                    <a><i class="iconfont fm logo-cp">&#xe72d;</i></a>
+                </div>
+            </div>
+
+
+            <div class="test">
+                <table border="1px" cellspacing="0" class="gridtable animated bounceInRight">
+                    <thead>
+                        <tr>
+                            <th scope="col">序号</th>
+                            <th scope="col">仓库</th>
+                            <th scope="col">存库名称</th>
+                            <th scope="col">型号</th>
+                            <th scope="col">规格</th>
+                            <th scope="col">色号</th>
+                            <th scope="col">装箱数</th>
+                            <th scope="col">采购单位</th>
+                            <th scope="col">数量</th>
+                            <th scope="col">单价</th>
+                            <th scope="col">金额</th>
+                            <th scope="col">现存量说明</th>
+                            <th scope="col">吨重</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-tbody1">
+
+                    </tbody>
+                </table>
+
+                <table border="1px" cellspacing="0" class="gridtable animated bounceInRight">
+                    <thead>
+                        <tr>
+                            <th scope="col">序号</th>
+                            <th scope="col">存货名称</th>
+                            <th scope="col">采购单位</th>
+                            <th scope="col">数量</th>
+                            <th scope="col">单价</th>
+                            <th scope="col">金额</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-tbody2">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="remark">
+                <div>
+                    <label for="remark">备注 ：</label>
+                    <input type="text" title="字数不能超过50个" id="remark" class="b-b1" style="width:600px;">
+                </div>
+                <div class="remark-wrap">
+                    <div class="remark-item">
+                        <label for="">制单人 ：</label>
+                        <input type="text" id="" class="b-b1">
+                    </div>
+                    <div class="remark-item">
+                        <label for="">审核人 ：</label>
+                        <input type="text" id="" class="b-b1">
+                    </div>
+                    <div class="remark-item">
+                        <label for="">审核日期 ：</label>
+                        <input type="date" id="" class="b-b1">
+                    </div>
+                    <div class="remark-item">
+                        <label for="">打印次数 ：</label>
+                        <input type="number" id="" class="b-b1" value="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
